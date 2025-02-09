@@ -1,0 +1,96 @@
+:root {
+  --brand: #1d2c3c;
+  --border: #646e7a;
+  --input-bg: #edeff2;
+  --max-width: 1440px;
+  --bg-muted: #f5f7fa;
+  --brand-aux: #548bc5;
+}
+
+@font-face {
+  font-family: "lato"; /* Name of the font */
+  src: url("../fonts/lato/Lato-Black.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "lato"; /* Name of the font */
+  src: url("../fonts/lato/Lato-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "lato"; /* Name of the font */
+  src: url("../fonts/lato/Lato-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "lato"; /* Name of the font */
+  src: url("../fonts/lato/Lato-Light.ttf") format("truetype");
+  font-weight: light;
+  font-style: normal;
+}
+
+* {
+  font-family: "lato", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+input {
+  all: unset;
+}
+
+h1 {
+  font-size: 30px;
+  margin-top: 12px;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+select {
+  outline: none;
+}
+
+body {
+  background: var(--background);
+  font-weight: normal;
+}
+
+.nav-list {
+  gap: 1rem;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.logo img {
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+}
