@@ -1,5 +1,5 @@
 :root {
-  --brand: #1d2c3c;
+  --brand: #0065fe;
   --border: #646e7a;
   --input-bg: #edeff2;
   --max-width: 1440px;
@@ -8,35 +8,47 @@
 }
 
 @font-face {
-  font-family: "lato"; /* Name of the font */
-  src: url("../fonts/lato/Lato-Black.ttf") format("truetype");
-  font-weight: 800;
+  font-family: "Gilroy";
   font-style: normal;
-}
-
-@font-face {
-  font-family: "lato"; /* Name of the font */
-  src: url("../fonts/lato/Lato-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "lato"; /* Name of the font */
-  src: url("../fonts/lato/Lato-Bold.ttf") format("truetype");
   font-weight: bold;
-  font-style: normal;
+  src: local("Gilroy-Bold"),
+    url("../fonts/gilroy/Gilroy-Bold.woff") format("woff");
 }
 
 @font-face {
-  font-family: "lato"; /* Name of the font */
-  src: url("../fonts/lato/Lato-Light.ttf") format("truetype");
-  font-weight: light;
+  font-family: "Gilroy";
   font-style: normal;
+  font-weight: black;
+  src: local("Gilroy-Heavy"),
+    url("../fonts/gilroy/Gilroy-Heavy.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: light;
+  src: local("Gilroy-Light"),
+    url("../fonts/gilroy/Gilroy-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Gilroy-Medium"),
+    url("../fonts/gilroy/Gilroy-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gilroy-Regular"),
+    url("../fonts/gilroy/Gilroy-Regular.woff") format("woff");
 }
 
 * {
-  font-family: "lato", sans-serif;
+  font-family: "Gilroy", sans-serif;
   padding: 0;
   margin: 0;
 }
@@ -75,8 +87,16 @@ body {
   font-weight: normal;
 }
 
+header {
+  padding-block: 1rem;
+}
+
 .nav-list {
   gap: 1rem;
+
+  li a {
+    font-weight: 500;
+  }
 }
 
 .logo {
@@ -93,4 +113,180 @@ body {
   position: absolute;
   width: 100%;
   object-fit: cover;
+}
+
+.btn {
+  height: 44px;
+  background: var(--brand);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding-inline: 2rem;
+
+  font-weight: 500;
+
+  border: 1px solid transparent;
+  border-radius: 100px;
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--brand);
+}
+
+.btn.outline {
+  background: transparent;
+  color: var(--brand);
+  border-color: var(--brand);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  white-space: nowrap;
+}
+
+.section-title span {
+  color: var(--brand);
+}
+
+.section-title ~ p {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 28px;
+
+  margin-top: 1rem;
+}
+
+.hero {
+  .title {
+    font-size: 3rem;
+    line-height: 96px;
+    font-weight: bold;
+
+    .short {
+      position: relative;
+      display: inline-block;
+      color: var(--brand);
+      svg {
+        position: absolute;
+        bottom: 0;
+        left: 60px;
+      }
+    }
+  }
+  .sub-title {
+    font-weight: 500;
+    max-width: 781px;
+    margin-inline: auto;
+    margin-top: 1rem;
+    padding-inline: 1rem;
+
+    font-size: 1.125rem;
+    line-height: 28px;
+  }
+
+  .action {
+    margin-block: 2rem;
+    gap: 1rem;
+  }
+}
+
+.analysis-container {
+  background: #f9fbfd;
+  padding: 3rem 0;
+  margin-bottom: 128px;
+}
+.analysis {
+  gap: 2rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .stats {
+    gap: 72px;
+
+    .stat {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .title {
+      font-weight: 500;
+    }
+  }
+}
+
+.features {
+  gap: 96px;
+  flex-wrap: wrap;
+  margin-bottom: 128px;
+
+  .section {
+    max-width: 400px;
+  }
+
+  .feature-grid {
+    justify-content: space-between;
+    flex: 1;
+    .feature {
+      max-width: 340px;
+      .icon {
+        height: 56px;
+        width: 56px;
+        background: rgba(50, 132, 255, 0.13);
+        border-radius: 100%;
+      }
+
+      .title {
+        font-size: 2rem;
+        white-space: nowrap;
+        font-weight: bold;
+      }
+
+      .desc {
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+.price-section {
+  ~ p {
+    max-width: 556px;
+    margin-inline: auto;
+    font-size: 1rem;
+    line-height: 24px;
+    font-weight: 500;
+  }
+}
+
+.plan {
+  .title {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .cost {
+    margin-top: 34px;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  .desc {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  .benefits {
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-block: 1.5rem;
+
+      span {
+        font-weight: 500;
+        font-size: 0.875rem;
+      }
+    }
+  }
 }

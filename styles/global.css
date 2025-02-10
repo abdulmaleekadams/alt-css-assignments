@@ -374,6 +374,10 @@ body {
   min-height: 100vh;
 }
 
+.gap-4 {
+  gap: 1rem;
+}
+
 /* Responsive Breakpoints */
 @media (min-width: 640px) {
   .sm\:text-sm {
